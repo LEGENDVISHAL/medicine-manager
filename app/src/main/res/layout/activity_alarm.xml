@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/alarm_card"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal">
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:elevation="5dp"
+            app:cardCornerRadius="75dp">
+
+            <ImageView
+                android:id="@+id/alarm_avatar"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/vishal3" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/alarm_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingHorizontal="20dp"
+
+
+        android:layout_alignTop="@id/alarm_card"
+
+
+        android:layout_marginTop="170dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Vishal"
+        android:textAlignment="gravity"
+        android:textColor="@color/dark_green"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/alarm_desc"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingHorizontal="20dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:textAlignment="gravity"
+
+        android:layout_alignTop="@id/alarm_user_name"
+
+
+        android:layout_marginTop="50dp"
+        android:text="Please take the following medicine" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/med_card"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_alignTop="@id/alarm_desc"
+android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="50dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/alarm_med_name"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Medicine Name"
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.05" />
+
+            <TextView
+                android:id="@+id/alarm_med_quantity"
+                android:layout_width="146dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="68dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Qty: 10"
+                android:textAlignment="gravity"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/alarm_med_time"
+                android:layout_width="146dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="68dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="10:45 PM"
+                android:textAlignment="gravity"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/alarm_took"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:text="Took Medicine"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/alarm_med_time" />
+
+            <Button
+                android:id="@+id/alarm_snooze"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Snooze Alarm"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/alarm_med_quantity" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/med_card"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_marginTop="191dp"
+        android:text="Please take the medicines on time.\nAvoid snoozing the reminder." />
+
+
+</RelativeLayout>
